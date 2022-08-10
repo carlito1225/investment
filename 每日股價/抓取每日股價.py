@@ -27,7 +27,7 @@ df = df.apply(lambda s:s.str.replace(',',''))
 df = df.set_index('證券代號')
 #去除非數字資料 (coerce 表示若轉換失敗就賦予nan)
 df = df.apply(lambda s: pd.to_numeric(s, errors='coerce'))
-#將欄位有nan的都移除
+#將欄位有NaN的都移除
 # axis (0:index, 1:column) 預設是0
 # how: 'any', 'all' 預設是 'any
 #'any' 如果有存在任何NaN, 則刪除該行或該列
